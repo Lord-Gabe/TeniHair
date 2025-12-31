@@ -6,13 +6,13 @@ const app = express();
 // Parse JSON bodies
 app.use(express.json());
 
-// CORS (if your frontend is on a different domain)
-import cors from "cors";
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN || "*", // e.g. "https://your-frontend.com"
-  })
-);
+// // CORS (if your frontend is on a different domain)
+// import cors from "cors";
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_ORIGIN || "*", // e.g. "https://your-frontend.com"
+//   })
+// );
 
 // Mount the contact route
 app.use("/api/contact", contactRouter);
